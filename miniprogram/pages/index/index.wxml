@@ -1,0 +1,32 @@
+<!--miniprogram/pages/index/index.wxml-->
+
+<wxs src="../../untils/word.wxs" module="m1"/>
+<wxs src="../../untils/format.wxs" module="k1"/>
+<view class="index">
+      <swiper class="index-swiper" indicator-dots="{{true}}"
+         autoplay="{{true}}" circular="{{true}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item}}" class="slide-image" width="355" height="150"/> 
+          </swiper-item>
+        </block>
+      </swiper>
+
+      <view class="index-tab">
+        <view class="{{current=='link'?'active':''}}?" data-current="link" bindtap="handlecurrnt" >推荐</view>
+        <view class="{{current=='time'?'active':''}}?" data-current="time"  bindtap="handlecurrnt">最新</view>
+      </view>
+
+      <view class="index-list">
+        <view class="index-list-item" wx:for="{{listData}}" wx:key="{{index}}">
+          <image mode="aspectFill" data-id="{{item._id}}" bindtap="handleDetail" src="{{item.userPhoto}}"/>
+            <view class="index-text"  >
+              <text>{{m1.wordSplit(item.nickName)}}</text>
+              <text   bindtap="handlelink"  data-id="{{item._id}}">
+               <text  class="iconfont icon-linedesign-02"  ></text>
+               <text>{{item.link}}</text>
+              </text>
+            </view>
+        </view>
+      </view>
+    </view>

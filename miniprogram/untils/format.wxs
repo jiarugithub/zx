@@ -1,0 +1,13 @@
+var format=function(number){
+  if(number >= 1000){
+    number = (number/1000).toFixed(1);
+    return number;
+  }
+}
+
+module.exports.format=format;
+
+
+
+
+

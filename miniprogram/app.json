@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/near/near",
+    "pages/message/message",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#937bf5",
+    "navigationBarTitleText": "交友软件",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+   
+  },
+  "sitemapLocation": "sitemap.json",
+   "tabBar": {
+    "color": "#999",
+    "selectedColor": "#00b5e5",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar/shouye1.png",
+        "selectedIconPath": "images/tabbar/shouye2.png"
+      },
+      {
+        "pagePath": "pages/near/near",
+        "text": "附近",
+        "iconPath": "images/tabbar/near2.png",
+        "selectedIconPath": "images/tabbar/near1.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/tabbar/message1.png",
+        "selectedIconPath": "images/tabbar/message2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "images/tabbar/wode1.png",
+        "selectedIconPath": "images/tabbar/wode2.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+    }
+  } 
+}
+
